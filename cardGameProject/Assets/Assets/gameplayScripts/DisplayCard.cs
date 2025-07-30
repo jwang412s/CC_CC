@@ -23,6 +23,7 @@ public class DisplayCard : MonoBehaviour
 
     void Start()
     {
+
         displayCard = CardDatabase.cardList[displayId];
 
         id = displayCard.id;
