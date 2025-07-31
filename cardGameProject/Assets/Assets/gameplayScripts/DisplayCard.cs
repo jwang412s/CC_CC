@@ -21,6 +21,9 @@ public class DisplayCard : MonoBehaviour
     public TextMeshProUGUI toughnessText;
     public TextMeshProUGUI descriptionText;
 
+    public bool cardBack;
+    public static bool staticCardBack;
+
     void Start()
     {
 
@@ -40,6 +43,6 @@ public class DisplayCard : MonoBehaviour
 
     void Update()
     {
-        
+        staticCardBack = cardBack;
     }
 }
