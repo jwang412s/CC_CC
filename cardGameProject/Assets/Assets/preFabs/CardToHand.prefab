@@ -777,6 +777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hand: {fileID: 0}
   HandCard: {fileID: 7004354777025833885}
+  ConfirmationUI: {fileID: 8950580256266507452, guid: f3ba060d949dc48e1a845ae65ce2eef8, type: 3}
 --- !u!1 &7566674411869989350
 GameObject:
   m_ObjectHideFlags: 0

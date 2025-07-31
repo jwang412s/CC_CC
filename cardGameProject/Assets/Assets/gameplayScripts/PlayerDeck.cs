@@ -44,7 +44,8 @@ public class PlayerDeck : MonoBehaviour
         for (int i = 0; i <= 4; i++)
         {
             yield return new WaitForSeconds(0.5f);
-            Instantiate(cardToHand, transform.position, transform.rotation);
+            Vector3 cardPosition = new Vector3(transform.position.x + (i * 300) - 250, transform.position.y -300, transform.position.z);
+            Instantiate(cardToHand, cardPosition, transform.rotation);
         }
     }
     public void Shuffle()
