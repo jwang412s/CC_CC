@@ -25,7 +25,7 @@ public class PlayerDeck : MonoBehaviour
             playerDeck.Add(CardDatabase.cardList[x]);
         }
 
-        // StartCoroutine(StartGame());
+        StartCoroutine(StartGame());
     }
 
     // Update is called once per frame
