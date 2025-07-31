@@ -86,3 +86,6 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 cardGameProject/Library
 
+/cardGameProject/Temp
+/cardGameProject/ProjectSettings
+/cardGameProject/UserSettings
