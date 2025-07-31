@@ -87,4 +87,5 @@ InitTestScene*.unity*
 cardGameProject/Library
 /cardGameProject/[Tt]emp
 /cardGameProject/UserSettings
+/cardGameProject/ProjectSettings
 *.dwlt
