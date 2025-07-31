@@ -7,7 +7,8 @@ public class PlayerDeck : MonoBehaviour
     public static List<Card> staticDeck = new List<Card>();
     public List<Card> playerDeck = new List<Card>();
     public int x;
-    public static int deckSize;
+    public int deckSize;
+    public static int staticDeckSize;
 
     public GameObject cardInDeck;
 

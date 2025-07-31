@@ -28,7 +28,7 @@ public class DisplayCard : MonoBehaviour
     public int numberOfCardsInDeck;
     void Start()
     {
-        numberOfCardsInDeck = PlayerDeck.deckSize;
+        numberOfCardsInDeck = PlayerDeck.staticDeckSize;
         displayCard = CardDatabase.cardList[displayId];
 
         id = displayCard.id;
@@ -56,7 +56,7 @@ public class DisplayCard : MonoBehaviour
         {
             displayCard = PlayerDeck.staticDeck[numberOfCardsInDeck - 1];
             numberOfCardsInDeck -= 1;
-            PlayerDeck.deckSize -= 1;
+            PlayerDeck.staticDeckSize -= 1;
             cardBack = false;
             this.tag = "Untagged";
         }
