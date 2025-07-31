@@ -24,9 +24,11 @@ public class DisplayCard : MonoBehaviour
     public bool cardBack;
     public static bool staticCardBack;
 
+    public GameObject Hand;
+    public int numberOfCardsInDeck;
     void Start()
     {
-
+        numberOfCardsInDeck = PlayerDeck.deckSize;
         displayCard = CardDatabase.cardList[displayId];
 
         id = displayCard.id;
@@ -35,14 +37,28 @@ public class DisplayCard : MonoBehaviour
         toughness = displayCard.toughness;
         cardDescription = displayCard.cardDescription;
 
-        nameText.text = " " + cardName;
-        powerText.text = " " + power;
-        toughnessText.text = " " + toughness;
-        descriptionText.text = " " + cardDescription;
+        nameText.text = "" + cardName;
+        powerText.text = ""  + power;
+        toughnessText.text = "" + toughness;
+        descriptionText.text = "" + cardDescription;
     }
 
     void Update()
     {
+        Hand = GameObject.Find("Hand");
+        if (this.transform.parent == Hand.transform)
+        {
+            cardBack = false;
+        }
         staticCardBack = cardBack;
+
+        if (this.tag == "Clone")
+        {
+            displayCard = PlayerDeck.staticDeck[numberOfCardsInDeck - 1];
+            numberOfCardsInDeck -= 1;
+            PlayerDeck.deckSize -= 1;
+            cardBack = false;
+            this.tag = "Untagged";
+        }
     }
 }
